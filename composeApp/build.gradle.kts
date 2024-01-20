@@ -16,6 +16,8 @@ kotlin {
         }
     }
     
+    jvm("desktop")
+    
     listOf(
         iosX64(),
         iosArm64(),
@@ -28,6 +30,7 @@ kotlin {
     }
     
     sourceSets {
+        val desktopMain by getting
         
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
@@ -40,6 +43,9 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+        }
+        desktopMain.dependencies {
+            implementation(compose.desktop.currentOs)
         }
     }
 }
@@ -74,8 +80,18 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     dependencies {
-        implementation(libs.voyager.navigator)
         debugImplementation(libs.compose.ui.tooling)
     }
 }
 
+compose.desktop {
+    application {
+        mainClass = "MainKt"
+
+        nativeDistributions {
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            packageName = "com.theolm.temp"
+            packageVersion = "1.0.0"
+        }
+    }
+}
