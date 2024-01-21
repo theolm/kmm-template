@@ -23,6 +23,7 @@ kotlin {
             implementation(libs.voyager.koin)
             implementation(libs.koin.core)
             implementation(libs.koin.test)
+            implementation(libs.koin.compose)
         }
     }
 }
