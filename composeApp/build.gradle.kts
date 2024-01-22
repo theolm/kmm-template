@@ -1,7 +1,7 @@
 plugins {
     id("android-application-setup")
     id("desktop-application-setup")
-    id("compose-component-setup")
+    id("compose-module-setup")
 }
 
 kotlin {
