@@ -19,4 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":composeApp")
+include(
+    ":composeApp",
+    ":api-client"
+)
