@@ -6,5 +6,5 @@ import org.koin.dsl.module
 
 val commonModule = module {
     single { Greeting() }
-    factory { HomeScreenModel(get()) }
+    factory { HomeScreenModel(get(), get()) }
 }

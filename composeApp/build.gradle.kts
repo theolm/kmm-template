@@ -23,6 +23,10 @@ kotlin {
             implementation(libs.koin.test)
             implementation(libs.koin.compose)
         }
+
+        desktopMain.dependencies {
+            implementation(libs.kotlin.coroutines.swing)
+        }
     }
 }
 

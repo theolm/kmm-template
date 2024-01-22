@@ -9,9 +9,9 @@ android {
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.client.negotiation)
-            implementation(libs.ktor.serialization.json)
+            api(libs.ktor.client.core)
+            api(libs.ktor.client.negotiation)
+            api(libs.ktor.serialization.json)
             implementation(libs.koin.core)
             implementation(libs.koin.test)
         }

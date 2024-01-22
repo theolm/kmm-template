@@ -3,7 +3,7 @@ import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.serialization.kotlinx.json.json
 
-class KtorClient(
+internal class KtorClient(
     private val engine: HttpClientEngine
 ) {
     val instance: HttpClient by lazy {
