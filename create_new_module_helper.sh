@@ -4,16 +4,13 @@
 read -p "Enter new module name: " module_name
 
 # Prompt user for application id
-read -p "What kind of module you would like to create: [1] compose [2] desktop [3] KMM: " option
+read -p "What kind of module you would like to create: [1] Compose [2] KMM: " option
 
 case $option in
 1)
   plugin_name=compose-module-setup
   ;;
 2)
-  plugin_name=desktop-application-setup
-  ;;
-3)
   plugin_name=kmm-module-setup
   ;;
 *)
@@ -34,10 +31,7 @@ if [ -z "${plugin_name}" ]; then
 fi
 
 # creating directories
-mkdir "${module_name}"
-mkdir "${module_name}/src"
-mkdir "${module_name}/src/commonMain/"
-mkdir "${module_name}/src/commonMain/kotlin"
+mkdir -p "${module_name}/src/commonMain/kotlin"
 
 echo -e "fun welcomeToYourNewModule() {\n \tprintln(\"hello world\")\n}" > "${module_name}/src/commonMain/kotlin/HelloWorld.kt"
 
