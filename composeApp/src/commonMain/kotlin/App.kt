@@ -11,4 +11,3 @@ fun App() {
         Navigator(HomeScreen())
     }
 }
-

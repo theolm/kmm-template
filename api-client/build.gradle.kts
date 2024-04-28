@@ -1,5 +1,6 @@
 plugins {
     id("kmm-module-setup")
+    id("detekt-setup")
 }
 
 android {

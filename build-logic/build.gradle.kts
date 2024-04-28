@@ -15,4 +15,5 @@ dependencies {
     implementation(libs.kotlin.gradle.plugin)
     implementation(libs.android.buildTools)
     implementation(libs.compose.plugin)
+    implementation(libs.detekt.gradlePlugin)
 }

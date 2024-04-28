@@ -2,6 +2,7 @@ plugins {
     id("android-application-setup")
     id("desktop-application-setup")
     id("compose-module-setup")
+    id("detekt-setup")
 }
 
 kotlin {

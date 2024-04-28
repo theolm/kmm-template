@@ -15,6 +15,6 @@ class HomeScreenModel(
 
     data class UiState(
         val showContent: Boolean = false,
-        val message : String = ""
+        val message: String = ""
     )
 }

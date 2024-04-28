@@ -1,5 +1,6 @@
 import config.Config
 import org.gradle.accessors.dm.LibrariesForLibs
+import plugins.setupKmpTargets
 
 plugins {
     id("com.android.library")
@@ -26,26 +27,12 @@ android {
 }
 
 kotlin {
-    androidTarget {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "17"
-            }
+    setupKmpTargets(
+        onBinariesFramework = {
+            it.baseName = "ComposeApp"
+            it.isStatic = true
         }
-    }
-
-    jvm("desktop")
-
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
-        }
-    }
+    )
 
     val libs = the<LibrariesForLibs>()
     sourceSets {
