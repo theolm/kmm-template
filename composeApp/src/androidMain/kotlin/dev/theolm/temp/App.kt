@@ -1,4 +1,4 @@
-package com.theolm.temp
+package dev.theolm.temp
 
 import android.app.Application
 import di.appModule

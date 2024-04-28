@@ -1,4 +1,4 @@
-package com.theolm.temp
+package dev.theolm.temp
 
 import App
 import android.os.Bundle

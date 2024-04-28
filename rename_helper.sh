@@ -65,7 +65,7 @@ echo "Directory structure created for $app_id_folder_structure in $android_main_
 echo "Contents moved to $new_complete_path"
 
 # Replace the package name in Kotlin files
-find "$new_complete_path" -type f -name "*.kt" -exec sed -i '' -e "s/package com.theolm.temp/package $app_id/g" {} +
+find "$new_complete_path" -type f -name "*.kt" -exec sed -i '' -e "s/package dev.theolm.temp/package $app_id/g" {} +
 
 
 # Replace the title in composeApp/src/desktopMain/kotlin/main.kt

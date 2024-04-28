@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.theolm.temp"
+    namespace = "dev.theolm.temp"
 }
 
 kotlin {
